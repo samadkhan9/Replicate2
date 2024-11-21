@@ -224,12 +224,10 @@ body {
     }
   
     .logo-carousel {
-      flex-wrap: wrap;
       gap: 10px;
     }
   
     footer {
-      line-height: 1.5;
       font-size: 0.9rem;
     }
   }

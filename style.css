@@ -9,35 +9,35 @@ body {
   
   .main-nav {
     display: flex;
-    justify-content: center;
     align-items: center;
     padding: 1rem;
     background-color: #007bff;
     color: #c3c7ce;
   }
   
+  .nav-bar {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%;
+    align-items: center;
+  }
+  
   .main-nav img {
     height: 6vh;
     max-width: 100%;
-  }
-  
-  .nav-bar {
-    display: flex;
-    justify-content: space-between;
-    width: 95%;
+    margin-right: auto;
   }
   
   .nav-list {
     display: flex;
     list-style: none;
     margin: 0;
-    align-items: center;
   }
   
   .nav-list a {
     text-decoration: none;
     color: #f5f6f7;
-    padding: 10px;
+    padding: 15px;
   }
   
   .nav-list a:hover {
@@ -50,13 +50,13 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
     background-image: url("Images/portrait-smiling-young-girl-using-mobile-phone.png");
     background-size: cover;
     background-position: center;
     height: 100vh;
     position: relative;
     background-color: #007bff;
+    width: 100%;
   }
   
   .box-1 img {
@@ -179,5 +179,58 @@ body {
     color: #fff;
     text-align: center;
     line-height: 100px;
+  }
+  
+  @media (max-width: 768px) {
+    .main-nav {
+      flex-direction: column; 
+      align-items: center;
+      text-align: center;
+    }
+  
+    .main-nav img {
+      margin: 0 auto;
+    }
+  
+    .nav-list {
+      flex-direction: column;
+      margin-left: auto;
+    }
+  
+    .nav-list a {
+      padding: 10px; 
+    }
+  
+    .box-1 {
+      height: auto; 
+    }
+  
+    .box-1 img {
+      width: 100%; 
+      height: auto; 
+    }
+  
+    .search-box {
+      width: 90%; 
+      max-width: 300px; 
+    }
+  
+    .box-1-text {
+      font-size: 13px; 
+    }
+  
+    .organizations {
+      padding: 20px 10px;
+    }
+  
+    .logo-carousel {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  
+    footer {
+      line-height: 1.5;
+      font-size: 0.9rem;
+    }
   }
   

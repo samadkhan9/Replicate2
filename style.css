@@ -1,234 +1,192 @@
+:root {
+  --main-font: 'Poppins', sans-serif;
+  --main-color: #333;
+  --accent-color: #007bff;
+  --background-color: #f8fafc;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f8fafc;
+  margin: 0;
+  padding: 0;
+  font-family: var(--main-font);
+  line-height: 1.6;
+  color: var(--main-color);
+  background-color: var(--background-color);
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--accent-color);
+  color: #c3c7ce;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.main-nav img {
+  height: 6vmin;
+  max-width: 100%;
+  margin-right: auto;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #f5f6f7;
+  padding: 1.5vmin;
+}
+
+.nav-list a:hover {
+  text-decoration: underline;
+  color: rgb(201, 60, 45);
+}
+
+.box-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("Images/portrait-smiling-young-girl-using-mobile-phone.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vmin;
+  position: relative;
+  background-color: var(--accent-color);
+  width: 100%;
+}
+
+.box-1 img {
+  width: 10vmin;
+  height: 80vmin;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.search-box {
+  padding: 1.5vmin;
+  border-radius: 1.5vmin;
+  color: #838891;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.search-box .search {
+  width: 100%;
+  max-width: 30vmin;
+  border-radius: 1.5vmin;
+  padding: 1.5vmin;
+  border: none;
+  background-color: #f1f4f8;
+  color: #838891;
+  text-align: center;
+  outline: none;
+}
+
+.search-box .search:focus {
+  border: 2px solid rgb(201, 60, 45);
+}
+
+.box-1-text {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-top: 15vmin;
+  color: #fff;
+}
+
+.organizations {
+  text-align: center;
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 4vmin 2vmin;
+}
+
+.organizations h2 {
+  font-weight: 400;
+  margin-bottom: 2vmin;
+}
+
+.logo-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 10vmin;
+}
+
+.logo-carousel {
+  display: flex;
+  gap: 3vmin;
+  justify-content: center;
+  position: absolute;
+  animation: slide 10s linear infinite;
+}
+
+.logo-carousel img {
+  width: auto;
+  max-height: 8vmin;
+  object-fit: contain;
+  opacity: 0.8;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.logo-carousel img.active {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
   }
-  
-  .main-nav {
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-    background-color: #007bff;
-    color: #c3c7ce;
+  100% {
+    transform: translateX(calc(-100% - 2vmin));
   }
-  
-  .nav-bar {
-    display: flex;
-    justify-content: space-between; 
-    width: 100%;
-    align-items: center;
-  }
-  
-  .main-nav img {
-    height: 6vh;
-    max-width: 100%;
-    margin-right: auto;
-  }
-  
-  .nav-list {
-    display: flex;
-    list-style: none;
-    margin: 0;
-  }
-  
-  .nav-list a {
-    text-decoration: none;
-    color: #f5f6f7;
-    padding: 15px;
-  }
-  
-  .nav-list a:hover {
-    text-decoration: underline;
-    color: rgb(201, 60, 45);
-  }
-  
-  .box-1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url("Images/portrait-smiling-young-girl-using-mobile-phone.png");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    position: relative;
-    background-color: #007bff;
-    width: 100%;
-  }
-  
-  .box-1 img {
-    width: 10%;
-    height: 80%;
-    object-fit: contain;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-  
-  .search-box {
-    padding: 10px;
-    border-radius: 10px;
-    color: #838891;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-  }
-  
-  .search-box .search {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
-    padding: 10px;
-    border: none;
-    background-color: #f1f4f8;
-    color: #838891;
-    text-align: center;
-    outline: none;
-  }
-  
-  .search-box .search:focus {
-    border: 2px solid rgb(201, 60, 45);
-  }
-  
-  .box-1-text {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    margin-top: 15vh;
-    color: #fff;
-  }
-  
-  .organizations {
-    text-align: center;
-    background-color: #1a1a1a;
-    color: #fff;
-    padding: 40px 20px;
-  }
-  
-  .organizations h2 {
-    font-weight: 400;
-    margin-bottom: 20px;
-  }
-  
-  .logo-container {
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    height: 10vh;
-  }
-  
-  .logo-carousel {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    position: absolute;
-    animation: slide 10s linear infinite;
-  }
-  
-  .logo-carousel img {
-    width: auto;
-    max-height: 80px;
-    object-fit: contain;
-    opacity: 0.8;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-  }
-  
-  .logo-carousel img.active {
-    opacity: 1;
-    transform: scale(1.1);
-  }
-  
-  @keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-100% - 20px));
-    }
-  }
-  
-  .rating {
-    margin-top: 20px;
-  }
-  
-  .rating p {
-    margin: 10px 0;
-  }
-  
-  .stars {
-    font-size: 24px;
-    color: red;
-  }
-  
-  .stars .half {
-    color: lightgray;
-  }
-  
-  footer {
-    height: 100px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    line-height: 100px;
-  }
-  
-  @media (max-width: 768px) {
-    .main-nav {
-      flex-direction: column; 
-      align-items: center;
-      text-align: center;
-    }
-  
-    .main-nav img {
-      margin: 0 auto;
-    }
-  
-    .nav-list {
-      flex-direction: column;
-      margin-left: auto;
-    }
-  
-    .nav-list a {
-      padding: 10px; 
-    }
-  
-    .box-1 {
-      height: auto; 
-    }
-  
-    .box-1 img {
-      width: 100%; 
-      height: auto; 
-    }
-  
-    .search-box {
-      width: 90%; 
-      max-width: 300px; 
-    }
-  
-    .box-1-text {
-      font-size: 13px; 
-    }
-  
-    .organizations {
-      padding: 20px 10px;
-    }
-  
-    .logo-carousel {
-      gap: 10px;
-    }
-  
-    footer {
-      font-size: 0.9rem;
-    }
-  }
-  
+}
+
+.rating {
+  margin-top: 2vmin;
+}
+
+.rating p {
+  margin: 1vmin 0;
+}
+
+.stars {
+  font-size: 2.4vmin;
+  color: red;
+}
+
+.stars .half {
+  color: lightgray;
+}
+
+footer {
+  height: 10vmin;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
